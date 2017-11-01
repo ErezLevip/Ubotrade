@@ -2,5 +2,12 @@
 .vscode/
 projectFilesBackup/
 AuthenticationService/vscode-root/
+AuthenticationService/AuthenticationService.txt
+BotService/BotService.txt
+ConfigurationService/ConfigurationService.txt
+RegistryService/RegistryService.txt
+UserService/UserService.txt
+WebApplication/WebApplication.txt
+
 
 
