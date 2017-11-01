@@ -1,0 +1,9 @@
+{
+  "mongodbconnectionstring":"localhost",
+  "mongodatabase":"DEV",
+  "Environment":"DEV",
+  "DefaultPort":8083,
+  "redisconnectionstring":"localhost:6379",
+  "redisdb":1,
+  "rediscredentials":""
+}

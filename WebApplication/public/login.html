@@ -1,0 +1,24 @@
+<div class="container-fluid" ng-controller="loginCtrl">
+    <a id="modal_trigger" href="#modal" style="display: none" ></a>
+    <div id="modal" class="popupContainer" style="display:none;">
+        <header class="popupHeader">
+            <span class="header_title">Login</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+        <section class="popupBody">
+            <!-- Social Login -->
+            <div class="social_login">
+                <div class="">
+                    <a href="#" class="social_box fb">
+                        <span class="icon"><i class="fa fa-facebook"></i></span>
+                        <span class="icon_title">Connect with Facebook</span>
+                    </a>
+                    <a href="#" class="social_box google" ng-click="login()">
+                        <span class="icon"><i class="fa fa-google-plus"></i></span>
+                        <span class="icon_title">Connect with Google</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

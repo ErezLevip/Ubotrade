@@ -1,0 +1,118 @@
+<div class="container-fluid" ng-controller="newbotCtrl">
+	                <div class="row">
+	                    <div class="col-md-8">
+	                        <div class="card">
+	                            <div class="card-header" data-background-color="purple">
+	                                <h4 class="title">Add New Bot</h4>
+									<p class="category">Add a new trading bot</p>
+	                            </div>
+	                            <div class="card-content">
+	                                <form>
+	                                    <div class="row">
+	                                        <div class="col-md-5">
+												<div class="form-group label-floating">
+													<label class="control-label">Bot name</label>
+													<input type="text" class="form-control" ng-model="name">
+												</div>
+	                                        </div>
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Time between samples (s)</label>
+													<input type="number" class="form-control" ng-model="timeIterations">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Base Commission</label>
+													<input type="number" class="form-control" ng-model="baseCommission">
+												</div>
+											</div>
+	                                    </div>
+
+	                                    <div class="row">
+	                                        <div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Lowest stair (%)</label>
+													<input type="number" class="form-control" ng-model="lowerStair">
+												</div>
+	                                        </div>
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Middle stair (%)</label>
+													<input type="number" class="form-control"  ng-model="middleStair">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Upper stair (%)</label>
+													<input type="number" class="form-control" ng-model="upperStair">
+												</div>
+											</div>
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">BuyOnPositiveSlop</label>
+													<input type="checkbox" class="form-control" ng-model="buyOnPositiveSlop" >
+												</div>
+	                                        </div>
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Emergency exit at (%)</label>
+													<input type="number" class="form-control" ng-model="fallback">
+												</div>
+											</div>
+	                                        <div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Number of results for slope calculation</label>
+													<input type="number" class="form-control" ng-model="priceBlockForSlop">
+												</div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="row">
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Buy Percentage Difference (%)</label>
+													<input type="number" class="form-control" ng-model="percentagePriceDifferenceOnBuy" >
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Retry Time Duration (s)</label>
+													<input type="number" class="form-control" ng-model="retryTimeDuration">
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="form-group label-floating">
+													<label class="control-label">Last Stair Timeout (m)</label>
+													<input type="number" class="form-control" ng-model="lastStairTimeout">
+												</div>
+											</div>
+	                                    </div>
+
+	                                    <button ng-click="addNewBot()" class="btn btn-primary pull-right">Create new Bot</button>
+	                                    <div class="clearfix"></div>
+	                                </form>
+	                            </div>
+	                        </div>
+	                    </div>
+						<div class="col-md-4">
+    						<div class="card card-profile">
+    							<div class="card-avatar">
+    								<a href="#pablo">
+    									<img class="img" src="img/faces/marc.jpg" />
+    								</a>
+    							</div>
+
+    							<div class="content">
+    								<h6 class="category text-gray">CEO / Co-Founder</h6>
+    								<h4 class="card-title">Alec Thompson</h4>
+    								<p class="card-content">
+    									Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+    								</p>
+    								<a href="#pablo" class="btn btn-primary btn-round">Follow</a>
+    							</div>
+    						</div>
+		    			</div>
+	                </div>
+	            </div>

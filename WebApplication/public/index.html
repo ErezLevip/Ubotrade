@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon.png"/>
+    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>UboTrade by Erez Levi</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+    <meta name="viewport" content="width=device-width"/>
+
+    <!-- Bootstrap core CSS     -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!--  Material Dashboard CSS    -->
+    <link href="css/material-dashboard.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet'
+
+          type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic'>
+</head>
+
+<body>
+
+<div class="wrapper" ng-controller="mainCtrl">
+
+    <div class="sidebar" data-color="purple" data-image="../img/sidebar-1.jpg">
+        <div class="logo">
+            <a class="simple-text">
+                <img class="img" src="img/logo.jpg">
+            </a>
+        </div>
+
+        <div class="sidebar-wrapper" ng-show="user">
+            <ul class="nav">
+                <li ng-class="{'active':state == 'dashboard'}">
+                    <a href="" ng-click="go('dashboard')">
+                        <i class="material-icons">dashboard</i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li ng-show="false" ng-class="{'active':state == 'newbot'}">
+                    <a href="" ng-click="go('newbot')">
+                        <i class="material-icons">person</i>
+                        <p>New Bot</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-transparent navbar-absolute" ng-show="user">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown" id="notificationIcon" ng-click="toggleNotification()">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="material-icons">notifications</i>
+                                <span class="notification" ng-show="newNotifications">{{newNotifications}}</span>
+                                <p class="hidden-lg hidden-md">Notifications</p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li ng-repeat="notification in notifications"><a href="#">{{notification}}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="index-login-container" ng-show="user.firstName">
+                        <label>Hello {{user.firstName}}</label>
+                        <img class="img" ng-src="{{user.img}}"/>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div ui-view></div>
+        </div>
+
+        <footer class="footer" ng-show="user">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Dashboard
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+</div>
+
+</body>
+
+<!--   Core JS Files   -->
+<script src="scripts/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script src="scripts/bootstrap.min.js" type="text/javascript"></script>
+<script src="scripts/material.min.js" type="text/javascript"></script>
+<script src='https://andwecode.com/wp-content/uploads/2015/10/jquery.leanModal.min_.js'></script>
+<!--  Charts Plugin -->
+<script src="scripts/chartist.min.js"></script>
+
+<!--  Notifications Plugin    -->
+<script src="scripts/bootstrap-notify.js"></script>
+
+<!-- Material Dashboard javascript methods -->
+<script src="scripts/material-dashboard.js"></script>
+
+<!--Angularjs-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-sanitize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/interceptors/authInterceptor.js"></script>
+<script src="scripts/controllers/dashboardController.js"></script>
+<script src="scripts/controllers/loginController.js"></script>
+<script src="scripts/controllers/mainController.js"></script>
+<script src="scripts/services/googleOauth.js"></script>
+<script src="scripts/services/notificationService.js"></script>
+<!--<script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload"></script>-->
+<script>
+
+      /*  var ele = document.getElementsByTagName('html')[0];
+        var att = document.createAttribute('ng-app');
+        att.value = 'app';
+        ele.setAttributeNode(att);*/
+
+      /*  var p = document.createElement('script');
+        p.type = 'text/javascript';
+        p.async = false;
+        p.src = 'scripts/app.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(p, s);*/
+   // }
+</script>
+</html>
