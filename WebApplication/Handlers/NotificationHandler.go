@@ -24,7 +24,7 @@ func NotificationsHandlerMake() NotificationsHandler {
 type NotificationRequestModel struct {
 	ReadAll bool `json:"read_all"`
 }
-
+// get the notifications of all the bots of the logged in user
 func (notificationHandler *NotificationsAPIHandler) GetNotifications(w http.ResponseWriter, req *http.Request, ctx context.Context) {
 	var requestModel NotificationRequestModel
 	_ = json.NewDecoder(req.Body).Decode(&requestModel)

@@ -65,20 +65,3 @@ func (authHandler *AuthApiHandler) Login(w http.ResponseWriter, req *http.Reques
 
 	return
 }
-
-/*
-func (infoHandler *DashBoardBotInfo) ValidateSession(w http.ResponseWriter, req *http.Request) {
-
-	var requestModel AuthorizeUserRequestModel
-	_ = json.NewDecoder(req.Body).Decode(&requestModel)
-	var res = make(map[string]interface{})
-	if (requestModel.Uid != "") {
-		res["IsAuthorized"] = true;
-		return
-	} else {
-		res["IsAuthorized"] = false;
-	}
-
-	json.NewEncoder(w).Encode(res)
-	return
-}*/
