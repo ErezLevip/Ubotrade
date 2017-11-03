@@ -1,8 +1,6 @@
 # Ubotrade
 
-I'm new to golang and this is my first real application using GO.
-
-Ubotrade is a microservices based crypto currency trader (still under development).
+Ubotrade is a microservices based crypto currency trader.
 
 I created the project to experience the language and to have a deeper understanding of some patterns such as middlewares and SOA.
 
