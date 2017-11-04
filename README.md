@@ -2,8 +2,6 @@
 
 Ubotrade is a microservices based crypto currency trader.
 
-I created the project to experience the language and to have a deeper understanding of some patterns such as middlewares and SOA.
-
 # The project is based on 2 core microservices:
 
 Registry service
@@ -36,5 +34,7 @@ The infrastructure is consumed by the Web Application.
 Even though it contains Client side and server side together it acts as API Gateway to the system.
 
 The client side of the web application (Angularjs) is authenticating using Google auth2.
+
+The Bot uses Kraken free ticker service and has a buy and sell methods, in order to buy just implement the methods with your credentials and personal data.
 
 At the moment there's no implementation of bot creation through the client side but the bot service is capable of creating it so the testing file is the only way to produce.
