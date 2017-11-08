@@ -5,6 +5,7 @@ AuthenticationService/vscode-root/
 AuthenticationService/AuthenticationService.txt
 BotService/BotService.txt
 ConfigurationService/ConfigurationService.txt
+BotConsumer/BotConsumer.txt
 RegistryService/RegistryService.txt
 UserService/UserService.txt
 WebApplication/WebApplication.txt

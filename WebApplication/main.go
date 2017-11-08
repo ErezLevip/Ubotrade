@@ -39,7 +39,7 @@ func main() {
 	log.Println(time.Now(), "WebApplication is now running on port:"+port)
 	srv := &http.Server{
 		Handler: r,
-		Addr:    ":" + port,
+		Addr:    "ubotrade.com:" + port,
 
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,

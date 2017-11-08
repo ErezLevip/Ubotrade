@@ -6,7 +6,6 @@ app.factory('authInterceptor', ['$q', 'googleOauth', '$state', function ($q, goo
                 if (config.url[0] != '/') {
                     config.url = "/" + config.url;
                 }
-                config.url = "http://" + Window.app + config.url;
             }
             console.log(config.url);
             if (config.url.indexOf('.html') != -1 || config.loginRequest) {

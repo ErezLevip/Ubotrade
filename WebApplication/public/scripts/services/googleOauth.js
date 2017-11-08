@@ -42,7 +42,9 @@ app.factory('googleOauth', ['$q','$state', function ($q,$state) {
         user = GoogleAuth.currentUser.get();
         var isAuthorized = user.hasGrantedScopes(SCOPE);
         if (!isAuthorized || !isSignedIn) {
-            GoogleAuth.signIn();
+            GoogleAuth.signIn().then(function (res) {
+                location.reload();
+            })
         }
     }
 
@@ -72,7 +74,9 @@ app.factory('googleOauth', ['$q','$state', function ($q,$state) {
     var redirectToLogin = function () {
         var oathDeferred = $q.defer();
         deferred.promise.then(function (g) {
-            GoogleAuth.signIn();
+            GoogleAuth.signIn().then(function (res) {
+                location.reload();
+            })
         });
         return oathDeferred.promise;
     };

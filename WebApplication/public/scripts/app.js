@@ -24,6 +24,3 @@ app.config(['$httpProvider', function ($httpProvider) {
     $httpProvider.interceptors.push('authInterceptor');
 }]);
 
-Window.app = "UboTrade.com";
-
-
