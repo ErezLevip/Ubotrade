@@ -38,3 +38,15 @@ The client side of the web application (Angularjs) is authenticating using Googl
 The Bot uses Kraken free ticker service and has a buy and sell methods, in order to buy just implement the methods with your credentials and personal data.
 
 At the moment there's no implementation of bot creation through the client side but the bot service is capable of creating it so the testing file is the only way to produce.
+
+
+In this Grapth purple line represents the current price, and the others are auto buy stairs.
+![alt text](https://image.ibb.co/eb5G8G/graph2.png)
+
+The buy and sell actions are called Activities and they are represented on the table below:
+![alt text](https://image.ibb.co/isGdNb/table1.png)
+
+
+
+
+
