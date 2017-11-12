@@ -29,8 +29,10 @@ func (notificationHandler *NotificationsAPIHandler) GetNotifications(w http.Resp
 	var requestModel NotificationRequestModel
 	_ = json.NewDecoder(req.Body).Decode(&requestModel)
 
+	//the app will use a testing id so other people will be able to see the bots
+	userId := "118103040085940455572"
 
-	userId := ctx.Value("UserId").(string)
+	//userId := ctx.Value("UserId").(string)
 	userSvc := ctx.Value(reflect.TypeOf(UserServiceAPI.UserServiceAPI{})).(*UserServiceAPI.UserServiceAPI)
 
 	if(requestModel.ReadAll){

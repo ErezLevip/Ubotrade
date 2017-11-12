@@ -71,7 +71,7 @@ func (infoHandler *DashBoardBotInfo) GetBotInformation(w http.ResponseWriter, re
 			resp["BotName"] = bot.Name
 			json.NewEncoder(w).Encode(resp)
 		} else {
-			log.Println(time.Now(),"botInfoResponse is empty")
+			log.Println(time.Now(), "botInfoResponse is empty")
 		}
 	}
 }
@@ -135,21 +135,28 @@ func (infoHandler *DashBoardBotInfo) GetBotProfits(w http.ResponseWriter, req *h
 		json.NewEncoder(w).Encode(resp)
 	}
 }
+
 // not implemented on the clientside yet, server logic already implemented on bot service
 func (infoHandler *DashBoardBotInfo) CreateNewBot(w http.ResponseWriter, req *http.Request, ctx context.Context) {
 
 }
+
 // not implemented on the clientside yet, server logic already implemented on bot service
 func (infoHandler *DashBoardBotInfo) CancelBot(w http.ResponseWriter, req *http.Request, ctx context.Context) {
 
 }
+
 // get all the active bots of the logged in account
 func (infoHandler *DashBoardBotInfo) GetAllActiveBots(w http.ResponseWriter, req *http.Request, ctx context.Context) {
 
 	botSvc := ctx.Value(reflect.TypeOf(BotServiceAPI.BotServiceAPI{})).(*BotServiceAPI.BotServiceAPI)
 
+	//the app will use a testing id so other people will be able to see the bots
+	userId := "118103040085940455572"
+
 	allBots, err := botSvc.GetAllActiveBots(Global.GetAllActiveBotsRequest{
-		UserId: ctx.Value("UserId").(string),
+		//UserId: ctx.Value("UserId").(string),
+		UserId: userId,
 	})
 	if err != nil {
 		log.Println(err.Error())
@@ -166,6 +173,7 @@ func (infoHandler *DashBoardBotInfo) GetAllActiveBots(w http.ResponseWriter, req
 	json.NewEncoder(w).Encode(resp)
 
 }
+
 // get the real time ticker data of the current bot
 func (infoHandler *DashBoardBotInfo) GetBotTickerData(w http.ResponseWriter, req *http.Request, ctx context.Context) {
 	botSvc := ctx.Value(reflect.TypeOf(BotServiceAPI.BotServiceAPI{})).(*BotServiceAPI.BotServiceAPI)
