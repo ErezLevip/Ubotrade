@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/go-kit/kit/endpoint"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/Global/GeneralMicroserviceBehavior"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/Global/GeneralMicroserviceBehavior"
 )
 
 func GetConfigurationEndpoint(svc ConfigurationService.IConfigurationService) endpoint.Endpoint {

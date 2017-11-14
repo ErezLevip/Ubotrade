@@ -2,11 +2,11 @@ package ConfigurationServiceLogging
 
 import (
 	"time"
+	"context"
 
 	"github.com/go-kit/kit/log"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/Global"
-	"context"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type LoggingMiddleware struct {

@@ -2,13 +2,13 @@ package BotLogging
 
 import (
 	"time"
-
+	"context"
 	"fmt"
+
 	"github.com/go-kit/kit/log"
 	"github.com/nu7hatch/gouuid"
-	"local/UbotTrade/BotService/Service"
-	"local/UbotTrade/Global"
-	"context"
+	"github.com/erezlevip/Ubotrade/BotService/Service"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type LoggingMiddleware struct {

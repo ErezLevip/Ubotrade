@@ -1,13 +1,14 @@
 package RegistryServiceAPI
 
 import (
-	"local/UbotTrade/API/BaseServiceAPI"
-	"local/UbotTrade/Global"
 	"log"
 	"context"
-	"local/UbotTrade/Global/GeneralMicroserviceBehavior"
 	"strings"
 	"strconv"
+
+	"github.com/erezlevip/Ubotrade/Global/GeneralMicroserviceBehavior"
+	"github.com/erezlevip/Ubotrade/API/BaseServiceAPI"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 const RegistryConfigKey = "RegistryService"

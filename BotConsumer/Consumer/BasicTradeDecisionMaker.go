@@ -3,7 +3,7 @@ package BotConsumer
 import (
 	"context"
 	"fmt"
-	"local/UbotTrade/Global"
+	"github.com/erezlevip/Ubotrade/Global"
 	"time"
 	"github.com/gaillard/go-online-linear-regression/v1"
 )

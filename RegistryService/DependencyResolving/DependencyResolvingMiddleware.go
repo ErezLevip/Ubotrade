@@ -2,11 +2,12 @@ package DependencyResolving
 
 import (
 	"time"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/DataHandlers/RabbitMQ"
-	"local/UbotTrade/DataHandlers/Redis"
 	"context"
-	"local/UbotTrade/RegistryService/Service"
+
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/DataHandlers/RabbitMQ"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/RegistryService/Service"
 )
 
 var LastConfigUpdate time.Time

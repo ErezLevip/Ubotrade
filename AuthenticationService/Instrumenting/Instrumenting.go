@@ -3,11 +3,11 @@ package AuthenticationInstrumenting
 import (
 	"fmt"
 	"time"
+	"context"
 
 	"github.com/go-kit/kit/metrics"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/AuthenticationService/Service"
-	"context"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/AuthenticationService/Service"
 )
 
 type InstrumentingMiddleware struct {

@@ -2,13 +2,13 @@ package BotConsumer
 
 import (
 	"context"
-
-	"local/UbotTrade/Global"
-	"github.com/nu7hatch/gouuid"
 	"strconv"
 	"fmt"
 	"time"
 	"log"
+
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/nu7hatch/gouuid"
 )
 
 type UbotTrader interface {

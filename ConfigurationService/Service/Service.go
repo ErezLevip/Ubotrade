@@ -2,16 +2,17 @@ package ConfigurationService
 
 import (
 	"gopkg.in/mgo.v2/bson"
-	"local/UbotTrade/API/RegistryServiceAPI"
-	"local/UbotTrade/DataHandlers/MongoDB"
-	"local/UbotTrade/Global"
 	"log"
 	"reflect"
-	"local/UbotTrade/API/ServiceAPIFactory"
 	"context"
 	"time"
-	"local/UbotTrade/DataHandlers/Redis"
 	"encoding/json"
+
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/erezlevip/Ubotrade/API/RegistryServiceAPI"
+	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 const ServicePrefix = "Services"

@@ -2,12 +2,13 @@ package BotService
 
 import (
 	"encoding/json"
-	"github.com/nu7hatch/gouuid"
-	"local/UbotTrade/DataHandlers/MongoDB"
-	"local/UbotTrade/DataHandlers/RabbitMQ"
-	"local/UbotTrade/Global"
 	"log"
 	"time"
+
+	"github.com/nu7hatch/gouuid"
+	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
+	"github.com/erezlevip/Ubotrade/DataHandlers/RabbitMQ"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type BotProducer struct {

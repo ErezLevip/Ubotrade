@@ -5,14 +5,15 @@ import (
 	"encoding/json"
 	"errors"
 	"io/ioutil"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/StaticConfiguration"
 	"log"
 	"net/http"
 	"strconv"
 	"context"
+
 	"github.com/nu7hatch/gouuid"
-	"local/UbotTrade/Global/GeneralMicroserviceBehavior"
+	"github.com/erezlevip/Ubotrade/Global/GeneralMicroserviceBehavior"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/StaticConfiguration"
 )
 
 var BasicConfig map[string]interface{}

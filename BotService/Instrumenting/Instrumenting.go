@@ -3,12 +3,12 @@ package BotInstrumenting
 import (
 	"fmt"
 	"time"
+	"context"
 
 	"github.com/go-kit/kit/metrics"
 	"github.com/nu7hatch/gouuid"
-	"local/UbotTrade/BotService/Service"
-	"local/UbotTrade/Global"
-	"context"
+	"github.com/erezlevip/Ubotrade/BotService/Service"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type InstrumentingMiddleware struct {

@@ -1,14 +1,15 @@
 package BotConsumer
 
 import (
-	"local/UbotTrade/DataHandlers/MongoDB"
-	"fmt"
-	"local/UbotTrade/API/ServiceAPIFactory"
-	"reflect"
-	"local/UbotTrade/API/UserServiceAPI"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/UserService/Service"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
+	"github.com/erezlevip/Ubotrade/API/UserServiceAPI"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/UserService/Service"
 	"github.com/nu7hatch/gouuid"
+
+	"fmt"
+	"reflect"
 	"time"
 	"encoding/json"
 	"context"

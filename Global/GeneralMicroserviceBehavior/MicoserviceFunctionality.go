@@ -1,7 +1,7 @@
 package GeneralMicroserviceBehavior
 
 import (
-	"local/UbotTrade/Global"
+	"github.com/erezlevip/Ubotrade/Global"
 	"encoding/json"
 	"context"
 	"log"
@@ -10,26 +10,6 @@ import (
 
 func RegisterMicroserviceHop(requestMetadata map[string]string, serviceInfo Global.ServiceInformation) {
 
-	/*var requestMetadata map[string]string
-	if (ctx == nil) {
-		ctx = context.Background()
-		requestMetadata = make(map[string]string)
-	} else {
-		requestMetadata = ctx.Value(Global.ContextKeyRequestMetadata).(map[string]string)
-		if (requestMetadata == nil) {
-			requestMetadata = make(map[string]string)
-		}
-	}
-	if (len(requestMetadata) == 0 || requestMetadata[Global.RequestMetadataKeyHops] == "") {
-		requestMetadata, err = appendHopToMetadata(requestMetadata, nil, serviceInfo)
-	} else {
-		servicesInfoStr := requestMetadata[Global.RequestMetadataKeyHops]
-
-		var servicesInfo []Global.ServiceInformation
-		json.Unmarshal([]byte(servicesInfoStr), &servicesInfo)
-		requestMetadata, err = appendHopToMetadata(requestMetadata, servicesInfo, serviceInfo)
-	}
-	newCtx = context.WithValue(ctx, Global.ContextKeyRequestMetadata, requestMetadata)*/
 	var err error
 	if (len(requestMetadata) == 0 || requestMetadata[Global.RequestMetadataKeyHops] == "") {
 		requestMetadata, err = appendHopToMetadata(requestMetadata, nil, serviceInfo)

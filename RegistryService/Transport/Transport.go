@@ -3,11 +3,12 @@ package RegistryServiceTransport
 import (
 	"context"
 	"encoding/json"
-	"github.com/go-kit/kit/endpoint"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/RegistryService/Service"
 	"net/http"
-	"local/UbotTrade/Global/GeneralMicroserviceBehavior"
+
+	"github.com/go-kit/kit/endpoint"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/RegistryService/Service"
+	"github.com/erezlevip/Ubotrade/Global/GeneralMicroserviceBehavior"
 )
 
 func RegisterEndpoint(svc RegistryService.IRegistryService) endpoint.Endpoint {

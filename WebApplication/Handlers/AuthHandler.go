@@ -3,11 +3,12 @@ package Handlers
 import (
 	"context"
 	"encoding/json"
-	"local/UbotTrade/API/AuthenticationServiceAPI"
-	"local/UbotTrade/Global"
 	"log"
 	"net/http"
 	"reflect"
+
+	"github.com/erezlevip/Ubotrade/API/AuthenticationServiceAPI"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type AuthorizeUserRequestModel struct {

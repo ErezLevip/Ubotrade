@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/go-kit/kit/endpoint"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/AuthenticationService/Service"
-	"local/UbotTrade/Global/GeneralMicroserviceBehavior"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/AuthenticationService/Service"
+	"github.com/erezlevip/Ubotrade/Global/GeneralMicroserviceBehavior"
 )
 
 func LoginEndpoint(svc AuthenticationService.IAuthenticationService) endpoint.Endpoint {

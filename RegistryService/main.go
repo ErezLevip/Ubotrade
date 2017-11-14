@@ -1,20 +1,22 @@
 package main
 
 import (
+	"net/http"
+	"os"
+
+	"github.com/erezlevip/Ubotrade/RegistryService/DependencyResolving"
+	"github.com/erezlevip/Ubotrade/Logger"
 	"github.com/go-kit/kit/log"
 	kitprometheus "github.com/go-kit/kit/metrics/prometheus"
 	httptransport "github.com/go-kit/kit/transport/http"
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-	"local/UbotTrade/DataHandlers/Redis"
-	"local/UbotTrade/RegistryService/Instrumenting"
-	"local/UbotTrade/RegistryService/Logging"
-	"local/UbotTrade/RegistryService/Service"
-	"local/UbotTrade/RegistryService/Transport"
-	"net/http"
-	"os"
-	"local/UbotTrade/RegistryService/DependencyResolving"
-	"local/UbotTrade/Logger"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+
+	"github.com/erezlevip/Ubotrade/RegistryService/Service"
+	"github.com/erezlevip/Ubotrade/RegistryService/Logging"
+	"github.com/erezlevip/Ubotrade/RegistryService/Instrumenting"
+	"github.com/erezlevip/Ubotrade/RegistryService/Transport"
 )
 
 func main() {

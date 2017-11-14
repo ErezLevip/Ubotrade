@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/go-kit/kit/endpoint"
-	"local/UbotTrade/BotService/Service"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/Global/GeneralMicroserviceBehavior"
+	"github.com/erezlevip/Ubotrade/BotService/Service"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/Global/GeneralMicroserviceBehavior"
 )
 
 func GetBotInformationEndpoint(svc BotService.IBotService) endpoint.Endpoint {

@@ -2,17 +2,18 @@ package DependencyResolving
 
 import (
 	"time"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/AuthenticationService/Service"
-	"local/UbotTrade/API/ServiceAPIFactory"
-	"reflect"
-	"local/UbotTrade/API/ConfigurationServiceAPI"
-	"local/UbotTrade/DataHandlers/MongoDB"
-	"local/UbotTrade/DataHandlers/RabbitMQ"
-	"log"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/DataHandlers/Redis"
 	"context"
+	"reflect"
+	"log"
+
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/AuthenticationService/Service"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/erezlevip/Ubotrade/API/ConfigurationServiceAPI"
+	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
+	"github.com/erezlevip/Ubotrade/DataHandlers/RabbitMQ"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
 )
 
 var LastConfigUpdate time.Time

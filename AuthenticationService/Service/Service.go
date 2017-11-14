@@ -2,16 +2,17 @@ package AuthenticationService
 
 import (
 	"errors"
-	"local/UbotTrade/API/RegistryServiceAPI"
-	"local/UbotTrade/API/ServiceAPIFactory"
-	"local/UbotTrade/API/UserServiceAPI"
-	"local/UbotTrade/DataHandlers/Redis"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/UserService/Service"
 	"log"
 	"reflect"
 	"time"
 	"context"
+
+	"github.com/erezlevip/Ubotrade/API/RegistryServiceAPI"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/erezlevip/Ubotrade/API/UserServiceAPI"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/UserService/Service"
 )
 
 type IAuthenticationService interface {

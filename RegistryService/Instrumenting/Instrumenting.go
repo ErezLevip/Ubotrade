@@ -3,12 +3,12 @@ package RegistryServiceInstrumenting
 import (
 	"fmt"
 	"time"
+	"context"
 
 	"github.com/go-kit/kit/metrics"
-	"local/UbotTrade/DataHandlers/Redis"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/RegistryService/Service"
-	"context"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/RegistryService/Service"
 )
 
 type InstrumentingMiddleware struct {

@@ -3,26 +3,24 @@ package main
 import (
 	"net/http"
 	"os"
+	"fmt"
+	"strconv"
+	"time"
+	"context"
 
 	stdprometheus "github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
-
 	kitprometheus "github.com/go-kit/kit/metrics/prometheus"
 	httptransport "github.com/go-kit/kit/transport/http"
-
-	"fmt"
+	"github.com/erezlevip/Ubotrade/Global/ServiceHealth"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/DependencyResolving"
 	"github.com/go-kit/kit/log"
-	"local/UbotTrade/ConfigurationService/Instrumenting"
-	"local/UbotTrade/ConfigurationService/Logging"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/ConfigurationService/Transport"
-	"local/UbotTrade/Global"
-	"strconv"
-	"time"
-	"local/UbotTrade/Global/ServiceHealth"
-	"local/UbotTrade/ConfigurationService/DependencyResolving"
-	"context"
-	"local/UbotTrade/Logger"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Instrumenting"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Logging"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Transport"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/Logger"
 )
 
 func main() {

@@ -3,18 +3,19 @@ package BotService
 import (
 	"encoding/json"
 	"errors"
-	"github.com/nu7hatch/gouuid"
-	"gopkg.in/mgo.v2/bson"
-	"local/UbotTrade/API/RegistryServiceAPI"
-	"local/UbotTrade/DataHandlers/MongoDB"
-	"local/UbotTrade/DataHandlers/RabbitMQ"
-	"local/UbotTrade/Global"
-	"log"
-	"time"
-	"local/UbotTrade/BotConsumer/Consumer"
-	"local/UbotTrade/API/ServiceAPIFactory"
 	"reflect"
 	"context"
+	"log"
+	"time"
+
+	"github.com/erezlevip/Ubotrade/BotConsumer/Consumer"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/nu7hatch/gouuid"
+	"gopkg.in/mgo.v2/bson"
+	"github.com/erezlevip/Ubotrade/API/RegistryServiceAPI"
+	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
+	"github.com/erezlevip/Ubotrade/DataHandlers/RabbitMQ"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type IBotService interface {

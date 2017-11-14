@@ -6,9 +6,9 @@ import (
 	"github.com/go-kit/kit/log"
 
 	"fmt"
-	"local/UbotTrade/DataHandlers/Redis"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/RegistryService/Service"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/RegistryService/Service"
 	"context"
 )
 

@@ -2,11 +2,12 @@ package Middlewares
 
 import (
 	"context"
-	"local/UbotTrade/API/AuthenticationServiceAPI"
-	"local/UbotTrade/API/ServiceAPIFactory"
-	"local/UbotTrade/Global"
 	"net/http"
 	"reflect"
+
+	"github.com/erezlevip/Ubotrade/API/AuthenticationServiceAPI"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type AuthMiddleware struct {

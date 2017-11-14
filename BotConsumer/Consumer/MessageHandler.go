@@ -5,16 +5,17 @@ import (
 	"encoding/asn1"
 	"encoding/json"
 	"fmt"
-	"local/UbotTrade/API/ConfigurationServiceAPI"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/DataHandlers/MongoDB"
-	"local/UbotTrade/DataHandlers/RabbitMQ"
-	"local/UbotTrade/Global"
 	"log"
 	"time"
-	"local/UbotTrade/API/ServiceAPIFactory"
 	"reflect"
 	"strconv"
+
+	"github.com/erezlevip/Ubotrade/API/ConfigurationServiceAPI"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
+	"github.com/erezlevip/Ubotrade/DataHandlers/RabbitMQ"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
 )
 
 // HandleMessage Triggerd by the consumer and invoke the bot from the message

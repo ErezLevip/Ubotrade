@@ -3,9 +3,9 @@ package RegistryService
 import (
 	"encoding/json"
 	"errors"
-	"local/UbotTrade/API/BaseServiceAPI"
-	"local/UbotTrade/DataHandlers/Redis"
-	"local/UbotTrade/Global"
+	"github.com/erezlevip/Ubotrade/API/BaseServiceAPI"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/Global"
 	"log"
 	"math/rand"
 	"time"

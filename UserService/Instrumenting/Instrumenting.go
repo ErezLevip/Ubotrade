@@ -3,11 +3,11 @@ package UserInstrumenting
 import (
 	"fmt"
 	"time"
+	"context"
 
 	"github.com/go-kit/kit/metrics"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/UserService/Service"
-	"context"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/UserService/Service"
 )
 
 type InstrumentingMiddleware struct {

@@ -3,14 +3,14 @@ package Handlers
 import (
 	"context"
 	"encoding/json"
-	"local/UbotTrade/API/BotServiceAPI"
-	"local/UbotTrade/Global"
 	"log"
 	"net/http"
 	"reflect"
+	"time"
 
 	"github.com/nu7hatch/gouuid"
-	"time"
+	"github.com/erezlevip/Ubotrade/API/BotServiceAPI"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type BotRequestModel struct {

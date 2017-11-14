@@ -5,9 +5,10 @@ import (
 	"encoding/json"
 	"net/http"
 	"reflect"
-	"local/UbotTrade/API/UserServiceAPI"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/UserService/Service"
+
+	"github.com/erezlevip/Ubotrade/API/UserServiceAPI"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/UserService/Service"
 )
 
 type NotificationsAPIHandler struct {

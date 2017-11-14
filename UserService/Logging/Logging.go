@@ -2,12 +2,12 @@ package UserLogging
 
 import (
 	"time"
-
 	"fmt"
-	"github.com/go-kit/kit/log"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/UserService/Service"
 	"context"
+
+	"github.com/go-kit/kit/log"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/UserService/Service"
 )
 
 type LoggingMiddleware struct {

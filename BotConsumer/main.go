@@ -1,19 +1,20 @@
 package main
 
 import (
-	"local/UbotTrade/API/ConfigurationServiceAPI"
-	"local/UbotTrade/BotConsumer/Consumer"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/DataHandlers/RabbitMQ"
-	"local/UbotTrade/Global"
 	"log"
 	"fmt"
 	asn1 "encoding/asn1"
-	"local/UbotTrade/API/ServiceAPIFactory"
 	"reflect"
 	"golang.org/x/net/context"
-	"local/UbotTrade/Logger"
 	"time"
+
+	"github.com/erezlevip/Ubotrade/API/ConfigurationServiceAPI"
+	"github.com/erezlevip/Ubotrade/BotConsumer/Consumer"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/DataHandlers/RabbitMQ"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/Logger"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
 )
 
 func main() { // add dynamic / static

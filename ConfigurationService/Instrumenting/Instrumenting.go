@@ -2,11 +2,12 @@ package ConfigurationServiceInstrumenting
 
 import (
 	"fmt"
-	"github.com/go-kit/kit/metrics"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/Global"
 	"time"
 	"context"
+
+	"github.com/go-kit/kit/metrics"
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 type InstrumentingMiddleware struct {

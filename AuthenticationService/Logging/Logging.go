@@ -2,12 +2,12 @@ package AuthenticationLogging
 
 import (
 	"time"
-
 	"fmt"
-	"github.com/go-kit/kit/log"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/AuthenticationService/Service"
 	"context"
+
+	"github.com/go-kit/kit/log"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/AuthenticationService/Service"
 )
 
 type LoggingMiddleware struct {

@@ -2,13 +2,14 @@ package DependencyResolving
 
 import (
 	"time"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/DataHandlers/MongoDB"
 	"log"
-	"local/UbotTrade/ConfigurationService/Service"
-	"local/UbotTrade/DataHandlers/Redis"
 	"context"
-	"local/UbotTrade/StaticConfiguration"
+
+	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/StaticConfiguration"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
 )
 
 var LastConfigUpdate time.Time

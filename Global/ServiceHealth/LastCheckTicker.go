@@ -2,12 +2,13 @@ package ServiceHealth
 
 import (
 	"encoding/json"
-	"local/UbotTrade/DataHandlers/Redis"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/RegistryService/Service"
 	"log"
 	"time"
 	"context"
+
+	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/RegistryService/Service"
 )
 
 func StartHealthTicker(ctx context.Context, serviceInfo Global.ServiceInformation) {

@@ -2,12 +2,13 @@ package Middlewares
 
 import (
 	"context"
-	"local/UbotTrade/API/AuthenticationServiceAPI"
-	"local/UbotTrade/API/BotServiceAPI"
-	"local/UbotTrade/API/ServiceAPIFactory"
-	"local/UbotTrade/API/UserServiceAPI"
 	"net/http"
 	"reflect"
+
+	"github.com/erezlevip/Ubotrade/API/AuthenticationServiceAPI"
+	"github.com/erezlevip/Ubotrade/API/BotServiceAPI"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/erezlevip/Ubotrade/API/UserServiceAPI"
 )
 
 type ResolverMiddleware struct {

@@ -1,14 +1,14 @@
 package main
 
 import (
-	"local/UbotTrade/WebApplication/Handlers"
-	"local/UbotTrade/WebApplication/Middlewares"
 	"log"
 	"net/http"
 	"time"
 
 	"github.com/gorilla/mux"
-	"local/UbotTrade/Logger"
+	"github.com/erezlevip/Ubotrade/WebApplication/Handlers"
+	"github.com/erezlevip/Ubotrade/WebApplication/Middlewares"
+	"github.com/erezlevip/Ubotrade/Logger"
 )
 
 func main() {

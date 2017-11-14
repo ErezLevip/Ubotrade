@@ -6,9 +6,9 @@ import (
 	"net/http"
 
 	"github.com/go-kit/kit/endpoint"
-	"local/UbotTrade/Global"
-	"local/UbotTrade/UserService/Service"
-	"local/UbotTrade/Global/GeneralMicroserviceBehavior"
+	"github.com/erezlevip/Ubotrade/Global"
+	"github.com/erezlevip/Ubotrade/UserService/Service"
+	"github.com/erezlevip/Ubotrade/Global/GeneralMicroserviceBehavior"
 )
 
 func GetUserEndpoint(svc UserService.IUserService) endpoint.Endpoint {

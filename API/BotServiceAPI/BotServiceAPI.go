@@ -1,13 +1,13 @@
 package BotServiceAPI
 
 import (
-	"local/UbotTrade/API/BaseServiceAPI"
-	"local/UbotTrade/API/RegistryServiceAPI"
-	"local/UbotTrade/Global"
 	"log"
-	"local/UbotTrade/API/ServiceAPIFactory"
 	"reflect"
 	"context"
+	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
+	"github.com/erezlevip/Ubotrade/API/BaseServiceAPI"
+	"github.com/erezlevip/Ubotrade/API/RegistryServiceAPI"
+	"github.com/erezlevip/Ubotrade/Global"
 )
 
 const BotServiceKey = "Bot"
