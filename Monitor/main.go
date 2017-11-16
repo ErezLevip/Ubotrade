@@ -1,5 +1,5 @@
 package main
-
+/*
 import (
 	"local/UbotTrade/DataHandlers/MongoDB"
 	"local/UbotTrade/DataHandlers/RabbitMQ"
@@ -28,3 +28,4 @@ func main() {
 	monitor.StartMonitor()
 
 }
+*/

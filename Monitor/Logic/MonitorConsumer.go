@@ -1,5 +1,5 @@
 package Logic
-
+/*
 import (
 	"encoding/json"
 	"fmt"
@@ -68,4 +68,4 @@ func (monitor ActiveBotMonitor) getAllActiveBots() []map[string]interface{} {
 		log.Println(err.Error())
 	}
 	return res
-}
+}*/
