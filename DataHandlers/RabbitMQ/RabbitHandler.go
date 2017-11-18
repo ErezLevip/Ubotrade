@@ -28,6 +28,7 @@ type IRabbitHandler interface {
 }
 
 func (self *RabbitHandler) Publish(message RabbitMessage) {
+	self.initialize()
 	body, err := asn1.Marshal(message)
 	self.handleErrors(err)
 	log.Println(time.Now(),"msg topic", message.Topic)
@@ -49,6 +50,7 @@ func (self *RabbitHandler) Publish(message RabbitMessage) {
 type OnMessageHandler func([]byte) bool
 
 func (self *RabbitHandler) Consume(routing string, onMessageHandler OnMessageHandler, failureMessageHandler OnMessageHandler, bulkSize int) {
+	self.initialize()
 	self.Channel.Qos(bulkSize, 0, false)
 	msgs, err := self.Channel.Consume(
 		self.Q.Name, // queue
@@ -109,15 +111,17 @@ func (self *RabbitHandler) retryMessageHandler(message []byte, messageHandler On
 }
 
 func (self *RabbitHandler) Init(config RabbitConfiguration) {
-	self.Config = config //only for consumers
-	conn, err := amqp.Dial(config.ConnectionString)
+
+}
+func (self *RabbitHandler) initialize()  {
+	conn, err := amqp.Dial(self.Config.ConnectionString)
 	self.handleErrors(err)
 
 	ch, err := conn.Channel()
 	self.handleErrors(err)
 
 	err = ch.ExchangeDeclare(
-		config.Topic, // name
+		self.Config.Topic, // name
 		"topic",      // type
 		true,         // durable
 		false,        // auto-deleted
@@ -128,7 +132,7 @@ func (self *RabbitHandler) Init(config RabbitConfiguration) {
 	self.handleErrors(err)
 	self.Channel = ch
 
-	if(config.IsConsumer){
+	if(self.Config.IsConsumer){
 		q, err := self.Channel.QueueDeclare(
 			"",    // name
 			false, // durable
@@ -142,8 +146,8 @@ func (self *RabbitHandler) Init(config RabbitConfiguration) {
 
 		err = self.Channel.QueueBind(
 			q.Name,         // queue name
-			config.Routing, // routing key
-			config.Topic,   // exchange
+			self.Config.Routing, // routing key
+			self.Config.Topic,   // exchange
 			false,
 			nil)
 		if err != nil {
