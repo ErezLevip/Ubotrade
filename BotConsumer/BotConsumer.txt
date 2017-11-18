@@ -32462,3 +32462,4 @@
 2017/11/15 00:56:05 2017-11-15 00:56:05.753643408 +0200 IST api response is empty
 2017/11/15 00:57:32 2017-11-15 00:57:32.66893654 +0200 IST api response is empty
 2017/11/15 01:00:13 2017-11-15 01:00:13.0511557 +0200 IST api response is empty
+2017/11/18 21:48:50 AMQP scheme must be either 'amqp://' or 'amqps://'

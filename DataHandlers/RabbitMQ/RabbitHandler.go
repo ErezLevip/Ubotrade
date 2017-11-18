@@ -111,7 +111,7 @@ func (self *RabbitHandler) retryMessageHandler(message []byte, messageHandler On
 }
 
 func (self *RabbitHandler) Init(config RabbitConfiguration) {
-
+	self.Config = config
 }
 func (self *RabbitHandler) initialize()  {
 	conn, err := amqp.Dial(self.Config.ConnectionString)
