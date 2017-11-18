@@ -11,7 +11,6 @@ import (
 	"github.com/erezlevip/Ubotrade/API/ServiceAPIFactory"
 	"github.com/erezlevip/Ubotrade/API/ConfigurationServiceAPI"
 	"github.com/erezlevip/Ubotrade/DataHandlers/MongoDB"
-	"github.com/erezlevip/Ubotrade/DataHandlers/RabbitMQ"
 	"github.com/erezlevip/Ubotrade/ConfigurationService/Service"
 	"github.com/erezlevip/Ubotrade/DataHandlers/Redis"
 )
@@ -19,7 +18,6 @@ import (
 var LastConfigUpdate time.Time
 var MongoDbConfiguration map[string]string
 var RedisConfiguration DataHandlers.RedisConfiguration
-var RabbitConfiguration RabbitMQ.RabbitConfiguration
 
 type DependencyResolvingMiddleware struct {
 	Next AuthenticationService.IAuthenticationService
@@ -52,13 +50,9 @@ func GetRequestContext(ctx context.Context) (context.Context) {
 	redisHandler := DataHandlers.RedisHandler{}
 	redisHandler.Init(RedisConfiguration)
 	ctx = context.WithValue(ctx, "RedisHandler", redisHandler)
-	rabbitHandler := &RabbitMQ.RabbitHandler{}
-	rabbitHandler.Init(RabbitConfiguration)
-	ctx = context.WithValue(ctx, "RabbitHandler", rabbitHandler)
 	//resolve configurations
 	ctx = context.WithValue(ctx, "RedisConfiguration", RedisConfiguration)
 	ctx = context.WithValue(ctx, "MongoConfiguration", MongoDbConfiguration)
-	ctx = context.WithValue(ctx, "RabbitConfiguration", RabbitConfiguration)
 
 	return ctx
 }
@@ -85,8 +79,6 @@ func getDependenciesConfiguration(ctx context.Context) {
 		Db:               int(connectionStringsConfig[ConfigurationService.RedisDatabaseKey].(float64)),
 	}
 
-	RabbitConfiguration = RabbitMQ.RabbitConfiguration{ConnectionString: connectionStringsConfig[ConfigurationService.RabbitMQConnectionStringKey].(string),
-		Topic: "Authentication_Requests"}
 	LastConfigUpdate = time.Now()
 }
 
