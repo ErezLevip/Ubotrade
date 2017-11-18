@@ -39,7 +39,7 @@ func (mw InstrumentingMiddleware) Login(ctx context.Context, clientId string, fi
 		mw.RequestCount.With(lvs...).Add(1)
 		mw.RequestLatency.With(lvs...).Observe(time.Since(begin).Seconds())
 		RequestCount++
-		if err != nil {
+		if err != nil && err.Error() != "UnAuthorized" {
 			FailureCount++
 		}
 	}(time.Now())
