@@ -27,15 +27,21 @@ type CacheHandler interface {
 	Delete(key string) error
 }
 
-func (self *RedisHandler) Init(config RedisConfiguration) {
-	self.config = config
+
+func (self *RedisHandler) init(){
 	self.client = redis.NewClient(&redis.Options{
 		Addr:     self.config.ConnectionString,
 		Password: self.config.Credentials,
 		DB:       self.config.Db})
 }
+func (self *RedisHandler) Init(config RedisConfiguration) {
+	self.config = config
+
+}
 
 func (self *RedisHandler) Lock(key string) (newLock *lock.Lock, err error) {
+	self.init()
+	defer self.client.Close()
 	newLock, err = lock.ObtainLock(self.client, key, &lock.LockOptions{
 		LockTimeout: time.Duration(5) * time.Second,
 		WaitRetry:   time.Duration(300) * time.Microsecond,
@@ -45,12 +51,16 @@ func (self *RedisHandler) Lock(key string) (newLock *lock.Lock, err error) {
 }
 
 func (self *RedisHandler) UnLock(lockedLock *lock.Lock) {
+	self.init()
+	defer self.client.Close()
 	if lockedLock.IsLocked() {
 		lockedLock.Unlock()
 	}
 }
 
 func (self *RedisHandler) Get(key string) (string, error) {
+	self.init()
+	defer self.client.Close()
 	res := self.client.Get(key)
 	if res.Err() != nil {
 		return "", res.Err()
@@ -62,6 +72,8 @@ func (self *RedisHandler) Get(key string) (string, error) {
 }
 
 func (self *RedisHandler) Set(key string, val interface{}, duration time.Duration) error {
+	self.init()
+	defer self.client.Close()
 	jsonBytes, err := json.Marshal(val)
 	if err != nil {
 		return err
@@ -71,6 +83,8 @@ func (self *RedisHandler) Set(key string, val interface{}, duration time.Duratio
 }
 
 func (self *RedisHandler) Delete(key string) error {
+	self.init()
 	status := self.client.Del(key)
+	defer self.client.Close()
 	return status.Err()
 }

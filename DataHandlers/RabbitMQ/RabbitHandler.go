@@ -45,6 +45,7 @@ func (self *RabbitHandler) Publish(message RabbitMessage) {
 	self.handleErrors(err)
 
 	log.Printf(" [x] Sent %s", message)
+	defer self.Channel.Close()
 }
 
 type OnMessageHandler func([]byte) bool
